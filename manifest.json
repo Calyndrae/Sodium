@@ -1,8 +1,23 @@
 {
   "manifest_version": 3,
   "name": "Sodium",
-  "version": "1.0",
-  "description": "Forces websites to prioritize raw rendering speed by stripping heavy animations and delays.",
+  "version": "3.0",
+  "description": "Raw speed, pre-fetching, and network-level tracker blocking.",
+  "permissions": [
+    "declarativeNetRequest"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "sodium_rules",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
