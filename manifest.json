@@ -1,0 +1,13 @@
+{
+  "manifest_version": 3,
+  "name": "Sodium",
+  "version": "1.0",
+  "description": "Forces websites to prioritize raw rendering speed by stripping heavy animations and delays.",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["engine.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
